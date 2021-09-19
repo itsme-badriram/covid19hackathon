@@ -1,0 +1,228 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading{
+    background-color: rgb(49, 110, 164);
+    color: white;
+    padding: 0.5em;
+    border-radius: 4px;
+    text-align: left;
+    padding-left: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading h2{
+    display: inline-block;
+}
+.request-icon{
+    background-image: url("Images/request-service.png");
+    width: 4em;
+    height: 4em;
+    background-size: 3em;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 1em;
+}
+.form-wrap{
+    box-shadow: 0px 0px 5px 2px grey;
+    padding: 1%;
+    margin: auto;
+    width: 50%;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+.form-wrap form{
+    width: 90%;
+    box-sizing: border-box;
+}
+.formReq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    font-size: 1.15em;
+}
+.formReq label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+label .text{
+    width: 100%;
+    box-sizing: border-box;
+}
+input, label input, label select, textarea{
+    width: 100%;
+    font-family: myFont;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.5em;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: white;
+    outline: none;
+}
+textarea{
+    resize: vertical;
+}
+label input:focus, label select:focus, textarea:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+input[type=submit], input[type=button]{
+    border: 0;
+    border: 1px solid rgb(49, 110, 164);
+    border-radius: 5px;
+    color: white;
+    margin: 0;
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgb(49, 110, 164);
+}
+input[type=submit]:hover, input[type=button]:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+#mapShow{
+    background-image: url("Images/pin.png");
+    width: 2.5em;
+    height: 2.5em;
+    z-index: 1;
+    background-size: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 1px white;
+    background-color: rgb(49, 110, 164);
+    position: absolute;
+    margin: 0.5em;
+    cursor: pointer;
+}
+#mapAll{
+    width: 100%;
+    height: 30vh;
+    margin: auto;
+    position: relative;
+}
+#googleMap{
+    width: 100%;
+    height: 30vh;
+    margin: auto;
+    position: relative;
+    background-color: rgb(0,0,0,0.25);
+    box-shadow: 0px 0px 3px 2px grey;
+    border-radius: 5px;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1450px){
+    .form-wrap{
+        width: 60%;
+    }
+    .formReq{
+        width: 85%;
+    }
+    .form-wrap form{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .form-wrap{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .form-wrap{
+        width: 80%;
+    }
+    .banner{
+        font-size: 0.85em;
+    }
+    .form-wrap{
+        font-size: 0.9em;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width: 900px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .heading{
+        font-size: 0.85em;
+    }
+    .form-wrap{
+        width: 95%;
+    }
+    .formReq{
+        width: 95%;
+    }
+    input[type=submit]{
+        margin-bottom: 1em;
+    }
+    #mapAll{
+        height: 25vh;
+    }
+    #googleMap{
+        height: 25vh;
+    }
+}
+@media only screen and (max-width: 500px){
+    .banner{
+        font-size: 0.7em;
+    }
+    .form-wrap{
+        font-size: 0.75em;
+    }
+}

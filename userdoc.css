@@ -1,0 +1,407 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.filter-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(49, 110, 164);
+    position: relative;
+}
+.banner h1{
+    color: white;
+    margin: 0px;
+    padding: 1%;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4em;
+    height: 4em;
+    background-size: 4em;
+    border-radius: 50%;
+    margin: 0.25em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.app-box, .lab-box{
+    width: 50%;
+    height: 80vh;
+    overflow: auto;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 5px;
+    border: 1px solid rgb(49, 110, 164);
+}
+.app-box::-webkit-scrollbar,.lab-box::-webkit-scrollbar{
+    display: none;
+}
+.app-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    padding: 0.75em;
+    border-radius: 4px;
+}
+.app-head h2{
+    margin: 0;
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.app-time{
+    margin-top: 0.75em;
+    font-size: 0.6em;
+    border-radius: 4px;
+    padding: 0.25em;
+    background-color: whitesmoke;
+    color: black;
+    width: max-content;
+    display: inline-block;
+}
+.app-icon, .date-icon, 
+.time-icon, .cont-icon,
+.acc-icon, .down-icon{
+    background-image: url("Images/doc-app.png");
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3em;
+    display: block;
+    background-color: white;
+}
+.app-tab ul{
+    padding: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.app-tab ul li{
+    padding: 0.5em;
+}
+.list{
+    cursor: pointer;
+    text-align: center;
+    width: 30%;
+    border-radius: 2em;
+}
+.list:hover{
+    background-color: rgba(0,0,0,0.15);
+    font-weight: bold;
+}
+.status{
+    text-align: center;
+}
+.acc-can{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acc-can h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    margin-top: 0;
+}
+.acc-can h5 span{
+    display: block;
+}
+.today-wrap, .upcome-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.upcome-wrap{
+    display: none;
+}
+.today{
+    width: 35%;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px gray;
+    transition: 0.3s;
+}
+.today:hover{
+    box-shadow: 0px 0px 10px 1px rgb(49, 110, 164);
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(49, 110, 164,0.25);
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+.today h3{
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.degree, .cate{
+    font-size: 0.6em;
+    font-weight: normal;
+}
+.date, .date-lab{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
+}
+.date-icon, .time-icon, 
+.cont-icon, .acc-icon,
+.down-icon{
+    background-image: url("Images/date.png");
+    width: 2em;
+    height: 2em;
+    background-size: 2em;
+    margin-right: 1em;
+}
+.time-icon{
+    background-size: 1.5em;
+    background-image: url("Images/time.png");
+}
+.cont-icon{
+    background-size: 1.25em;
+    background-image: url("Images/contact.png");
+}
+.acc-icon{
+    background-image: url("Images/success.png");
+    background-color: rgb(49, 110, 164,0.05);
+}
+.cancel{
+    background-image: url("Images/wrong.png");
+}
+.date a{
+    text-decoration: none;
+    color: rgb(49, 110, 164);
+}
+.today input[type=button]{
+    font-family: myFont;
+    border: none;
+    padding: 0.5em;
+    width: 100%;
+    outline: none;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    background-color: seagreen;
+}
+.today textarea{
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 4px;
+    resize: none;
+    padding: 0.75em;
+    font-family: myFont;
+    font-size: 0.95em;
+    overflow: auto;
+    white-space: pre-line;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+.cancelBack{
+    background-color: rgba(150,0,0,0.25);
+}
+.canc-book{
+    background-color: rgb(150,0,0) !important;
+    cursor: pointer;
+}
+.lab{
+    background-image: url("Images/report.png");
+}
+.lab-report{
+    box-sizing: border-box;
+    padding: 0.75em;
+    margin: 0.5em;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.lab-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lab-time .cont{
+    font-size: 0.65em;
+}
+.cont .cont-icon{
+    margin-right: 0.25em;
+}
+.lab-time h3{
+    margin: 0;
+    margin-right: 1.5em;
+}
+.date-lab{
+    margin: 0;
+}
+.doc-details h4{
+    font-size: 0.75em;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 0.25em;
+}
+.doc-content{
+    padding: 0.75em;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.doc-content h5{
+    margin: 0;
+    text-align: justify;
+    margin-right: 2em;
+}
+.download{
+    display: flex;
+    align-items: center;
+    padding: 0.25em;
+    padding-right: 0.75em;
+    border-radius: 5px;
+    font-size: 0.85em;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(49, 110, 164);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.download:hover{
+    background-color: black;
+}
+.down-icon{
+    background-size: 1.25em;
+    background-color: unset;
+    margin-right: 0.1em;
+    background-image: url("Images/pdf.png");
+    filter: invert(1);
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1550px){
+    .main{
+        width: 95%;
+    }
+    .today{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:1350px){
+    .main{
+        flex-direction: column;
+    }
+    .app-box, .lab-box{
+        width: 75%;
+    }
+}
+@media only screen and (max-width:1000px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .app-box, .lab-box{
+        width: 85%;
+        font-size: 0.95em;
+    }
+    .footer{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width:850px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .app-box, .lab-box{
+        width: 90%;
+        font-size: 0.85em;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:700px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .today{
+        width: 55%;
+    }
+    .date-lab{
+        font-size: 0.85em;
+    }
+}
+@media only screen and (max-width:600px){
+    .app-box, .lab-box{
+        height: 100vh;
+        margin: 0.5em;
+        width: 95%;
+    }
+    .app-head{
+        font-size: 0.95em;
+    }
+    .app-head h2{
+        width: 75%;
+    }
+    .today{
+        width: 90%;
+        margin: 0.5em;
+    }
+    .lab-time{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .date-lab{
+        font-size: 1em;
+    }
+    .date-lab .date-icon{
+        border-radius: unset;
+    }
+}

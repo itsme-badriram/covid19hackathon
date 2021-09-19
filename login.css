@@ -1,0 +1,380 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    background-color: rgb(49, 110, 164);
+}
+.banner a{
+    margin-right : 1em;
+    margin-left: auto;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner h1{
+    color: white;
+    margin: 0px;
+    width: 75%;
+    padding: 1%;
+}
+.sub-heading{
+    margin: 0px;
+    padding: 1em;
+    display: inline-block;
+}
+#signup{
+    border: none;
+    background-color: white;
+    font-size: 1em;
+    font-family: myFont;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    width: 80%;
+    transition: 0.2s;
+    width: max-content;
+    font-size: 1.15em;
+    padding-right: 2em;
+    padding-left: 2em;
+    margin-right: 1em;
+    margin-left: auto;
+    outline: none;
+    cursor: pointer;
+}
+#signup:hover{
+    box-shadow: 0px 0px 2px 1px white;
+    background-color: rgb(49, 110, 164);
+    color: white;
+}
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+.quick-bar{
+    width: 55%;
+    padding: 1em;
+    height: 75vh;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.qbox a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.qbox{
+    width: 40%;
+    margin: 1em;
+    box-shadow: 0px 2px 3px 1px gray;
+    border-radius: 5px;
+    height: auto;
+    padding: 0.75em;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.img{
+    background-image: url("Images/geo-color.png");
+    width: 6em;
+    height: 6em;
+    background-size: 4em;
+    transition: 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.health{
+    background-image: url("Images/amb.png");
+}
+.video{
+    background-image: url("Images/video.png");
+}
+.help{
+    background-image: url("Images/help.png");
+}
+.donate{
+    background-image: url("Images/money.png");
+}
+.info{
+    background-image: url("Images/info.png");
+}
+.geo:hover .img,.near:hover .img, .online:hover .img, 
+.helpline:hover .img, .don:hover .img, .gov:hover .img{
+    background-size: 5em;
+}
+.geo:hover{
+    background-color: rgba(49, 110, 164,0.25);
+    box-shadow: 0px 0px 3px 1px gray;
+}
+.near:hover{
+    background-color: rgba(150,0,0,0.35);
+}
+.online:hover{
+    background-color: rgba(49, 110, 0, 0.25);
+}
+.helpline:hover{
+    background-color: rgba(235, 149, 69, 0.5);
+}
+.don:hover{
+    background-color: rgba(85, 238, 65, 0.5);
+}
+.gov:hover{
+    background-color: rgba(178, 233, 107, 1);
+}
+.qbox h3, .qbox h5{
+    margin: 0;
+    text-align: center;
+}
+.qbox h5{
+    font-weight: normal;
+    margin-top: 0.5em;
+}
+.box{
+    width: 35%;
+    padding: 1em;
+    box-shadow: 0px 3px 4px 1px grey;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+    height: 8em;
+    overflow: hidden;
+}
+.form-wrap{
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+form{
+    padding: 1em;
+    width: 85%;
+    margin: auto;
+}
+form input, form select{
+    margin-bottom: 1em;
+    padding: 0.85em;
+    font-family: myFont;
+    font-size: 1.05em;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    border: 1px solid rgb(49, 110, 164);
+    border-radius: 3px;
+    outline: none;
+}
+form input[type=text]:focus,form input[type=password]:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+} 
+form select{
+    background-color: white;
+    cursor: pointer;
+}
+form input[type=submit]{
+    background-color: rgb(49, 110, 164);
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgb(49, 110, 164);
+    transition: 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+form input[type=submit]:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+}
+form a{
+    text-decoration: none;
+    color: rgb(49, 110, 164);
+}
+.icon{
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 2em;
+    border-radius: 50%;
+    display: block;
+    padding: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0.25em;
+    opacity: 0.25;
+}
+.user{
+    background-image: url("Images/user.png");
+}
+.doc{
+    background-image: url("Images/doctor.png");
+}
+.work{
+    background-image: url("Images/essential.png");
+}
+.admin{
+    background-image: url("Images/admin.png");
+}
+.vol{
+    background-image: url("Images/volunteer.png");
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1400px){
+    .main{
+        flex-direction: column;
+    }
+    .box{
+        margin-top: 1em;
+        width: 50%;
+    }
+    .quick-bar{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .box{
+        width: 65%;
+    }
+    .quick-bar{
+        width: 75%;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:1050px){
+    .box{
+        width: 70%;
+    }
+    .quick-bar{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:950px){
+    .banner{
+        font-size: 0.80em;
+    }
+    .sub-heading{
+        font-size: 1.05em;
+    }
+    .box{
+        width: 80%;
+    }
+    .quick-bar{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:850px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .main{
+        font-size: 0.85em;
+    }
+    .box{
+        width: 90%;
+    }
+    .quick-bar{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:550px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .box{
+        padding: 0.75em;
+    }
+    .quick-bar{
+        font-size: 0.95em;
+        height: auto;
+    }
+    .qbox{
+        width: 65%;
+        height: 25vh;
+    }
+    .form-wrap{
+        width: 95%;
+    }
+    .slider{
+        font-size: 0.85em;
+    }
+    .icon{
+        padding: 0.75em;
+        margin: 0.15em;
+    }
+    form{
+        width: 90%;
+        font-size: 0.85em;
+    }
+    form input, form select{
+        font-size: 1.15em;
+    }
+}
+@media only screen and (max-width:500px){
+    .box{
+        width: 95%;
+    }
+    .quick-bar{
+        padding: 0.5em;
+    }
+    .qbox{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:350px){
+    .qbox{
+        height: 30vh;
+    }
+}

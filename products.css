@@ -1,0 +1,316 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#mapAll{
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+#mapShow{
+    background-image: url("Images/nearby.png");
+    width: 2.5em;
+    height: 2.5em;
+    z-index: 1;
+    background-size: 1.25em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    position: absolute;
+    margin: 0.5em;
+    cursor: pointer;
+}
+#googleMap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(49, 110, 164);
+    position: relative;
+}
+.banner h1{
+    color: white;
+    margin: 0px;
+    width: 75%;
+    padding: 1%;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4em;
+    height: 4em;
+    background-size: 4em;
+    border-radius: 50%;
+    margin: 0.25em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading{
+    margin: 0;
+    border-radius: 4px;
+    padding: 0.5em;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    background-image: url("Images/msme.png");
+    width: 3em;
+    height: 3em;
+    background-size: 2em;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+}
+.form-wrap{
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 50%;
+    padding: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px 2px grey;
+}
+.form-wrap form{
+    width: 60%;
+    margin: auto;
+}
+.form-wrap label{
+    text-align: left;
+    margin: 0;
+    display: inline-block;
+    width: auto;
+    padding: 0.5em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+form input, form select{
+    padding: 0.65em;
+    margin: 1em 0em;
+    font-size: 1.1em;
+    font-family: myFont;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+form input:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+form input[type=radio]:focus{
+    box-shadow: none;
+}
+.products{
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 5px;
+}
+.products h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add{
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.red{
+    background-color: rgb(150,0,0);
+}
+.red:hover{
+    color: rgb(150,0,0);
+    box-shadow: 0px 0px 2px 1px rgb(150,0,0);
+}
+.validbox{
+    display: none;
+}
+input[type=checkbox], input[type=radio]{
+    text-align: left;
+    width: auto;
+    margin: 0.75em;
+}
+label:hover{
+    background-color: rgba(49, 110, 164,0.25);
+}
+.submit_button{
+    text-align: center;
+}
+.quantity .quan{
+    margin-top: 0.5em;
+}
+input[type=submit], input[type=button], button{
+    background-color: rgb(49, 110, 164);
+    color: white;
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 1.75em;
+    font-size: 1.15em;
+    font-family: myFont;
+    font-weight: bold;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+    width: 35%;
+}
+input[type=button]:hover, input[type=submit]:hover, button:hover{
+    color: rgb(49, 110, 164);
+    background-color: white;
+    box-shadow: 0px 0px 2px 2px rgb(49,110,164);
+}
+.form-wrap .form-wrap{
+    box-shadow: none;
+    margin: 3% 1%;
+    width: 95%;
+    font-size: 1em;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1600px){
+    .form-wrap{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:1500px){
+    .form-wrap{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:1300px){
+    .form-wrap{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:1150px){
+    .banner{
+        font-size: 0.8em;
+    }
+    .heading{
+        font-size: 1.2em;
+    }
+    .form-wrap{
+        width: 75%;
+    }
+    .form-wrap form{
+        width: 65%;
+    }
+    .footer{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width:1000px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .form-wrap{
+        width: 80%;
+    }
+    .form-wrap form{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:900px){
+    .form-wrap{
+        width: 85%;
+    }
+    .form-wrap form{
+        width: 75%;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:800px){
+    .banner{
+        font-size: 0.7em;
+    }
+    .form-wrap{
+        width: 90%;
+        font-size: 0.95em;
+    }
+    .form-wrap form{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:700px){
+    .form-wrap{
+        width: 95%;
+        box-shadow: 0px 1px 2px 0px gray;
+    }
+    .form-wrap form{
+        width: 85%;
+    }
+    .submit_button{
+        box-sizing: border-box;
+    }
+    input[type=submit]{
+        box-sizing: border-box;
+        width: 95%;
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+@media only screen and (max-width:500px){
+    .form-wrap{
+        font-size: 0.85em;
+    }
+    .form-wrap form{
+        width: 95%;
+    }
+    .footer{
+        font-size: 0.7em;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+}   

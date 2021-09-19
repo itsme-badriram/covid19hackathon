@@ -1,0 +1,121 @@
+.main{
+    position: relative;
+}
+.scroll-stop{
+    height: 100%;
+    overflow: hidden;
+}
+.filter-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qrButton{
+    font-family: myFont;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 50%;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color:seagreen;
+}
+.qrButton:hover{
+    background-color: black;
+}
+.popup {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display:none;
+}
+.popup video{
+    width: 100%;
+    min-height: 100vh;
+    object-fit: fill;
+}
+.jobSlide{
+    display: none;
+    width: 100%;
+}
+.jobScan{
+    margin: auto;
+    border: 1px solid gray;
+    padding: 0.5em;
+    border-radius: 4px;
+    margin-top: 1em;
+    width: 90%;
+}
+.jDetails div{
+    font-size: 0.85em;
+    width: 75%;
+}
+.qrScan{
+    width: 4em;
+    height: 4em;
+    border: none;
+    font-family: myFont;
+    color: white;
+    font-size: 1.05em;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-right: 0.75em;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    background-color: rgb(49, 110, 164);
+}
+.qrScan:hover{
+    box-shadow: 0px 0px 5px 2px rgb(49, 110, 164);
+    background-color: white;
+    color: rgb(49, 110, 164);
+}
+.verify{
+    border: 1px solid gray;
+    color: black;
+    background-color: whitesmoke;
+}
+.scan-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 0.85em;
+    width: 100%;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.scan-head h3{
+    margin-right: auto;
+    margin-left: 2em;
+}
+#back{
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    font-size: 1.05em;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    color: black !important;
+    border-radius: 50%;
+    margin-left: 1em;
+    cursor: pointer;
+}
+@media only screen and (max-width:500px){
+    .qrButton{
+        font-size: 1.1em;
+        width: 85%;
+    }
+    .qrScan{
+        margin-right: 0em;
+    }
+}

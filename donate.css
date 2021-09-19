@@ -1,0 +1,135 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.quick-bar{
+    margin: auto;
+    width: 50%;
+    padding: 1em;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.qbox a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.qbox{
+    width: 40%;
+    margin: 1em;
+    box-shadow: 0px 2px 3px 1px gray;
+    border-radius: 5px;
+    height: 25vh;
+    padding: 0.75em;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.qbox h3, .qbox h5{
+    margin: 0;
+    text-align: center;
+}
+.qbox h5{
+    font-weight: normal;
+    margin-top: 0.5em;
+}
+.img{
+    background-image: url("Images/geo-color.png");
+    width: 6em;
+    height: 6em;
+    background-size: 4em;
+    transition: 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.donate{
+    background-image: url("Images/money.png");
+}
+.rel{
+    background-image: url("Images/relief.png");
+}
+.don:hover{
+    background-color: rgba(85, 238, 65, 0.5);
+}
+.relief:hover{
+    background-color: rgba(178, 233, 107, 1);
+}
+@media only screen and (max-width:1400px){
+    .quick-bar{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .quick-bar{
+        width: 75%;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:1050px){
+    .quick-bar{
+        width: 80%;
+        padding: 0.5em;
+    }
+}
+@media only screen and (max-width:950px){
+    .banner{
+        font-size: 0.80em;
+    }
+    .quick-bar{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:850px){
+    .banner{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:550px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .quick-bar{
+        font-size: 0.95em;
+        height: auto;
+    }
+}
+@media only screen and (max-width:500px){
+    .qbox{
+        width: 85%;
+        height: auto;
+    }
+}

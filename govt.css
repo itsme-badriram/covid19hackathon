@@ -1,0 +1,154 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(49, 110, 164);
+    position: relative;
+}
+.banner h1{
+    color: white;
+    margin: 0px;
+    width: 75%;
+    padding: 1%;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4em;
+    height: 4em;
+    background-size: 4em;
+    border-radius: 50%;
+    margin: 0.25em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 75%;
+}
+.box{
+    background-color: rgba(49, 110, 164,0.15);
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 20vh;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 2px 0px grey;
+}
+.box:hover{
+    background-color: rgb(49, 110, 164);
+    color: white;
+}
+.box:hover a{
+    color: white;
+}
+.box:hover .img{
+    background-color: white;
+}
+.box:hover .light{
+    background-color: black;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.img{
+    background-image: url("Images/govt.png");
+    width: 5em;
+    height: 5em;
+    background-size: 3.5em;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+.ann{
+    background-image: url("Images/announce.png");
+}
+.fire{
+    background-image: url("Images/fire-engine.png");
+}
+.gas{
+    background-image: url("Images/gas.png");
+}
+.light{
+    background-image: url("Images/light.png");
+    filter: invert(1);
+}
+.ser{
+    background-image: url("Images/info.png");
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 900px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .form-wrap{
+        width: 85%;
+    }
+    .heading{
+        font-size: 0.5em;
+    }
+    .box{
+        font-size: 1em;
+        width: 85%;
+    }
+    .footer{
+        font-size: 0.75em;
+        box-sizing: border-box;
+        padding: 0.5em;
+    }
+}
+@media only screen and (max-width:500px){
+    .main{
+        width: 95%;
+    }
+    .box{
+        font-size: 0.85em;
+        width: 90%;
+        height: 20vh;
+    }
+}
+@media only screen and (max-width:320px){
+    .box{
+        height: 25vh;
+    }
+}

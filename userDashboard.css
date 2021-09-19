@@ -1,0 +1,1262 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main-first, .main-second, .main-third, .main-fourth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    margin-top: 1em;
+    box-sizing: border-box;
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.button:hover a{
+    color: rgb(49, 110, 164);
+}
+.carousel{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73.5%;
+    margin: auto;
+    margin-top: 1em;
+}
+.show{
+    height: 20vh !important;
+    outline: none;
+    box-sizing: border-box;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.back-image{
+    width: 20em;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("Images/volunteer.jpg");
+    background-size: contain;
+    float: right;
+}
+.volunteer{
+    padding-left: 1em;
+}
+.volunteer .button{
+    width: max-content;
+}
+.cont-ess{
+    background-size: 20em;
+    background-image: url("Images/essential.jpg");
+}
+.doct-img{
+    background-size: 20em;
+    background-image: url("Images/doctor.jpg");
+}
+.no-entry{
+    width: 12em;
+    background-image: url("Images/no-entry.png");
+}
+.box{
+    width: 50%;
+    margin: 1em;
+    box-sizing: border-box;
+    padding: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 1px gray;
+}
+.request{
+    width: 40%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(49, 110, 164,0.05);
+}
+.req-back{
+    background-image: url("Images/vol-new.png");
+    width: 12em;
+    height: 12em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12em;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+    margin-top: 1em;
+    box-shadow: 0px 3px 4px 0px rgb(49, 110, 164);
+}
+.req-title, .status-title{
+    margin: 0;
+    font-size: 1.25em;
+    padding-left: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head{
+    padding-left: 0.5em;
+    border-left: 5px solid black;
+    font-size: 1.25em;
+}
+.icon{
+    background-image: url("Images/service.png");
+    width: 3em;
+    height: 3em;
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+.request p{
+    text-align: justify;
+    width: 80%;
+    line-height: 2;
+    margin: 0;
+}
+.ser-category{
+    width: 80%;
+    padding: 0em 1em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid gray;
+}
+.ser-category h3{
+    margin: 0;
+    font-size: 1em;
+    padding: 0.75em 0em;
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: auto;
+    padding-bottom: 1em;
+}
+.checkbox:hover{
+    color: rgb(49, 110, 164);
+    font-weight: bold;
+}
+.check{
+    width: 1.25em;
+    height: 1.25em;
+    background-color: rgba(0, 0, 0,0.2);
+    display: block;
+}
+.checked{
+    background-color: rgb(49, 110, 164);
+    position: relative;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.checked::after{
+    position: absolute;
+    top: 0.135em;
+    left: 0.4em;
+    content: '';
+    width: 0.25em;
+    height: 0.6em;
+    border-color: white;
+    border-width: 0px 0.2em 0.2em 0px;
+    border-style: solid;
+    transform: rotate(45deg);
+}
+.check-title{
+    margin-right: auto;
+    font-size: 1em;
+    padding-left: 1em;
+}
+.count{
+    width: 1em;
+    height: 1em;
+    padding: 0.5em;
+    background-color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.button{
+    padding: 0.65em 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-family: myFont;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    transition: 0.2s;
+}
+.button:hover{
+    color: rgb(49, 110, 164);
+    background-color: white;
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.req-status{
+    width: 60%;
+    height: 75vh;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+.status{
+    box-shadow: 0px 1px 2px 1px gray;
+    width: 100%;
+    margin: 0;
+    padding: 0.65em;
+    height: 35vh;
+    box-sizing: border-box;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+}
+.job-desc{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.job-icon{
+    width: 2em;
+    height: 2em;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 0.5em;
+}
+.legend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.legend .on, .legend .off{
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(49, 110, 164);
+    margin: 0em 1em;
+}
+.legend .on{
+    background-color: seagreen;
+}
+.legend .off{
+    background-color: rgb(250,0,0);
+}
+.status-title{
+    background-color: rgb(49, 110, 164);
+    color: white;
+    padding: 0.5em;
+}
+.status-box{
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px gray;
+    border-left: 5px solid rgb(49, 110, 164);
+}
+.status-box h3{
+    margin: 0;
+    padding: 0.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.on-off{
+    width: 1em;
+    height: 1em;
+    background-color: seagreen;
+    border-radius: 50%;
+}
+.off-status{
+    background-color: rgb(250,0,0);
+}
+.category{
+    background-color: whitesmoke;
+    padding: 0.3em 1.1em;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: auto;
+    margin-left: 1em;
+    font-weight: normal;
+    border: 1px solid rgba(0, 0, 0,0.1);
+}
+.job-overview{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.jobDetails{
+    text-align: left;
+    table-layout: fixed;
+    font-size: 0.9em;
+}
+.jobDetails td, .jobDetails th{
+    padding: 0.5em;
+}
+.jobDetails td a{
+    text-decoration: none;
+    color: rgb(49, 110, 164);
+    font-weight: bold;
+}
+.jobID{
+    font-weight: bold;
+    color: grey;
+    font-size: 0.75em;
+    letter-spacing: 1.5px;
+    padding-left: 0.5em;
+}
+.job-view{
+    display: block;
+    margin-top: auto;
+}
+.sub-heading{
+    margin: 0;
+    height: 10vh;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.sub-heading span{
+    width: 25%;
+}
+.sub-heading::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: rgb(49, 110, 164);
+    display: block;
+}
+.near-hosp{
+    margin: 0;
+    width: 100%;
+    height: 30vh;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    display: flex;
+}
+.red-zone{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+}
+.red-dist{
+    width: 2.25em;
+    height: 2.25em;
+    background-color: seagreen;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: auto;
+}
+.red-dist span{
+    font-size: 0.35em;
+    font-weight: normal;
+}
+.red-title{
+    text-align: center;
+    padding: 1em;
+}
+.map-zone{
+    background-image: url("Images/loca.png");
+    width: 2.5em;
+    height: 2.5em;
+    background-size: 2.5em;
+}
+.maps{
+    margin-top: auto;
+}
+.nearby{
+    width: 70%;
+    margin: 0;
+    margin-left: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(49, 110, 164,0.01);
+}
+.hos{
+    color: black;
+    background-color: unset;
+    padding: 0.25em;
+}
+.hos span:nth-child(1){
+    border-left: 5px solid rgb(49, 110, 164);
+    padding-left: 0.75em;
+}
+.hosp{
+    width: 2em;
+    height: 2em;
+    background-size: 2em;
+    background-image: url("Images/amb.png");
+}
+.hosp-box{
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px gray;
+}
+.hos-title{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hos-title .dist{
+    font-weight: normal;
+    font-size: 0.9em;
+    width: 15%;
+    text-align: center;
+    padding: 0.25em;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 1em;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cont{
+    width: 1em;
+    height: 1em;
+    background-size: 1em;
+    background-image: url("Images/contact.png");
+}
+.contact a{
+    margin-left: 0.5em;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(49, 110, 164);
+    margin-right: auto;
+}
+.contact .map{
+    width: 2em;
+    height: 2em;
+    background-size: 2em;
+    background-image: url("Images/map-icon.png");
+    cursor: pointer;
+}
+.second-title{
+    margin: 0;
+    margin: auto;
+    width: 75%;
+    padding: 2em;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.second-title::before, .second-title::after{
+    content: '';
+    width: 37%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    background-color: gray;
+}
+.second-title::before{
+    margin-left: -30%;
+}
+.second-title::after{
+    margin-left: 30%;
+}
+.main-second, .main-third{
+    flex-wrap: wrap;
+}
+.ess{
+    margin-top: 0;
+    width: 25%;
+    height: 40vh;
+    border-top: 4px solid rgb(49, 110, 164);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.essential-title{
+    margin: 0;
+    padding: 0.75em;
+    border-radius: 4px;
+}
+.workers, .msme, .prod{
+    width: 7em;
+    height: 7em;
+    background-size: 6em;
+    background-image: url("Images/ess.png");
+    margin-top: 1em;
+}
+.ess p{
+    width: 75%;
+    text-align: justify;
+    color: grey;
+}
+.msme{
+    background-size: 5em;
+    background-image: url("Images/msme.png");
+}
+.prod{
+    background-size: 5em;
+    background-image: url("Images/relief.png");
+}
+.doctor{
+    width: 47.5%;
+    height: 30vh;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+.appoint{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+.side{
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    height: 100%;
+    background-color: rgba(49, 110, 164,0.15);
+    padding-left: 0;
+}
+.side .button{
+    margin: 0 !important;
+    font-size: 0.8em;
+    padding: 0.5em;
+    width: 80% !important;
+}
+.doc-book{
+    width: 4em;
+    height: 4em;
+    background-size: 3.5em;
+    background-image: url("Images/doc.png");
+}
+.appoint-details{
+    width: 70%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px 0px gray;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.appoint-details h3{
+    padding-left: 0.5em;
+    border-left: 5px solid seagreen;
+    margin-top: 0.25em;
+}
+.avail-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+}
+.avail-info .count{
+    border-radius: 50%;
+}
+.red{
+    background-color: red;
+}
+.avail-info span:nth-child(2){
+    padding: 0.85em;
+}
+.appoint-details .hosp-box{
+    margin-top: 0.65em;
+}
+.hosp-box .prof{
+    display: inline-block;
+    padding: 0.35em;
+    border-radius: 4px;
+    font-size: 0.75em;
+    border: 1px solid gainsboro;
+    background-color: whitesmoke;
+    margin-bottom: 0.25em;
+}
+.map.go{
+    background-size: 0.85em;
+    background-image: url("Images/back-white.png");
+    background-color: rgb(49, 110, 164);
+    border-radius: 50%;
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.map.go:hover{
+    background-color: black;
+}
+.doc-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: unset;
+    border-bottom: 1px solid gray;
+}
+.doc-title span:nth-child(1){
+    border-left: 5px solid black;
+    padding-left: 0.5em;
+}
+.doc{
+    background-color: white;
+    border-radius: 50%;
+    background-image: url("Images/date.png");
+}
+.date-time{
+    padding: 0.5em;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin: 0.5em 0em;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+.doc-details{
+    box-sizing: border-box;
+    margin: 0.5em;
+    box-shadow: 0px 0px 2px 0px gray;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.doc-name{
+    display: block;
+    padding: 0.5em 0em;
+    padding-left: 0.25em;
+    font-size: 1em;
+}
+.doc-time{
+    font-weight: bold;
+    display: block;
+    background-color: whitesmoke;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+.doctor .button{
+    width: max-content;
+    margin: auto;
+    margin-top: 1.5em;
+}
+.lab-results, .report{
+    margin-top: 1em;
+}
+.report{
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+}
+.report .box{
+    margin: 0;
+    width: 48%;
+    height: 100%;
+}
+.lab-results{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.lab-title span:nth-child(1){
+    border-left-color: darkmagenta;
+}
+.result{
+    background-image: url("Images/report.png");
+}
+.lab{
+    margin-top: 1em;
+    box-sizing: border-box;
+    padding: 0.5em;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 0.5px gray;
+    background-color: rgba(49, 110, 164,0.02);
+    border-left: 2px solid rgb(49, 110, 164);
+}
+.lab-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+.lab-details .time{
+    font-size: 0.7em;
+    padding: 0.5em;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+.lab .doc-msg{
+    color: grey;
+    text-align: justify;
+    display: block;
+    padding: 0.5em;
+    font-size: 0.85em;
+    margin-top: 0.5em;
+}
+.lab .doc-name, .lab .contact{
+    font-size: 0.85em;
+}
+.lab .doc-name{
+    font-weight: normal;
+}
+.lab-results .button{
+    margin-top: 1em !important;
+}
+.suspect{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(240, 245, 244);
+}
+.symp{
+    margin-top: 1em;
+    width: 5em;
+    height: 5em;
+    background-size: 4.5em;
+    background-image: url("Images/treatment.png");
+}
+.rep-hosp{
+    background-image: url("Images/map-geo.png");
+}
+.suspect h3{
+    margin-bottom: 0;
+}
+.suspect p{
+    text-align: center;
+    width: 75%;
+    font-size: 0.85em;
+    color: grey;
+}
+.suspect .button{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+.service{
+    width: 25%;
+    height: 35vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.service h3{
+    text-align: center;
+}
+.service p{
+    width: 75%;
+    text-align: center;
+    color: gray;
+    font-size: 0.85em;
+}
+.service .button{
+    width: 40%;
+    text-align: center;
+}
+.help, .gov, 
+.video, .donate{
+    width: 7em;
+    height: 7em;
+    background-size: 5em;
+    background-image: url("Images/helpline.png");
+    display: block;
+}
+.gov{
+    background-image: url("Images/info.png");
+}
+.donate{
+    background-size: 4em;
+    background-image: url("Images/money.png");
+}
+.video{
+    background-size: 4em;
+    background-image: url("Images/video.png");
+}
+.service:hover{
+    background-color: rgba(49, 110, 164,0.15);
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-height:850px){
+    .doctor .button{
+        margin-bottom: 1em;
+    }
+    .no-entry{
+        background-size: 10em;
+    }
+}
+@media only screen and (max-width:1560px){
+    .main-first, .main-second, .main-third, .main-fourth{
+        width: 80%;
+    }
+    .carousel{
+        width: 80%;
+    }
+    .ess{
+        width: 26%;
+    }
+}
+@media only screen and (max-width:1450px){
+    .main-first, .main-second, .main-third, .main-fourth{
+        width: 95%;
+    }
+    .carousel{
+        width: 95%;
+    }
+    .ess{
+        width: 30.5%;
+    }
+}
+@media only screen and (max-width:1300px){
+    .main-first{
+        flex-direction: column;
+    }
+    .request, .req-status{
+        width: 65%;
+    }
+    .doctor{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .request, .req-status{
+        width: 70%;
+    }
+    .doctor{
+        width: 70%;
+    }
+    .main-fourth{
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .service{
+        width: 35%;
+    }
+}
+@media only screen and (max-width:1100px){
+    .request, .req-status{
+        width: 75%;
+    }
+    .doctor{
+        width: 75%;
+    }
+    .ess{
+        width: 35%;
+    }
+    .service{
+        width: 40%;
+    }
+    .second-title::before, .second-title::after{
+        width: 30%;
+    }
+}
+@media only screen and (max-width:1000px){
+    .request, .req-status{
+        width: 80%;
+    }
+    .doctor{
+        width: 80%;
+    }
+    .ess{
+        width: 40%;
+    }
+    .service{
+        width: 45%;
+    }
+}
+@media only screen and (max-width:950px){
+    .banner{
+        font-size: 0.8em;
+    }
+    .second-title{
+        width: 85%;
+    }
+    .carousel{
+        width: 90%;
+        font-size: 0.85em;
+    }
+    .main-first, .main-second, .main-third, .main-fourth{
+        font-size: 0.95em;
+    }
+    .footer{
+        font-size: 0.85em;
+    }
+}
+@media only screen and (max-width: 800px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .carousel{
+        font-size: 0.8em;
+    }
+    .main-first, .main-second, .main-third, .main-fourth{
+        font-size: 0.9em;
+    }
+    .request, .req-status{
+        width: 85%;
+    }
+    .doctor{
+        width: 85%;
+    }
+    .ess{
+        width: 45%;
+    }
+    .footer{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 720px){
+    .main-first, .main-second, .main-third, .main-fourth{
+        font-size: 0.85em;
+    }
+    .request, .req-status{
+        width: 90%;
+    }
+    .doctor{
+        width: 90%;
+    }
+    .ess{
+        width: 50%;
+    }   
+}
+@media only screen and (max-width: 600px){
+    .carousel{
+        font-size: 0.75em;
+    }
+    .volunteer{
+        width: 50%;
+    }
+    .volunteer .button{
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .hos-title .dist{
+        width: 25%;
+    }
+    .main-first, .main-second, .main-third, .main-fourth{
+        font-size: 0.8em;
+    }
+    .request, .req-status{
+        width: 95%;
+    }
+    .doctor{
+        width: 95%;
+    }
+    .ess{
+        width: 55%;
+    }
+    .service{
+        width: 60%;
+    }   
+}
+@media only screen and (max-width: 500px){
+    .carousel .show{
+        height: 40vh !important;
+        flex-direction: column-reverse;
+    }
+    .volunteer{
+        width: 95%;
+        padding-left: 0;
+    }
+    .back-image{
+        margin: auto;
+        width: 22em;
+        height: 15em;
+        background-size: 22em;
+    }
+    .no-entry{
+        width: 10em;
+        height: 10em;
+        background-size: 10em;
+    }
+    .job-view{
+        font-size: 0.8em;
+    }
+    .sub-heading span{
+        width: 40%;
+    }
+    .req-status{
+        height: auto !important;
+    }
+    .status{
+        height: auto !important;
+    }
+    .red-zone{
+        width: 90%;
+        height: auto;
+    }
+    .near-hosp{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .nearby{
+        margin-top: 1.5em;
+        width: 90%;
+        margin-left: 0;
+        height: auto !important;
+    }
+    .nearby .hosp-box{
+        margin-top: 1em;
+    }
+    .appoint{
+        flex-direction: column;
+        height: auto;
+    }
+    .side{
+        flex-direction: row;
+        width: 100%;
+        padding: 0.5em;
+    }
+    .side .button{
+        width: max-content !important;
+    }
+    .appoint-details{
+        width: 100%;
+        margin-top: 1em;
+    }
+    .ess{
+        width: 85%;
+    }
+    .suspect .button{
+        text-align: center;
+        width: 40%;
+    }
+    .second-title{
+        width: 90%;
+    }
+    .second-title::after, .second-title::before{
+        width: 45%;
+    }
+    .second-title::before{
+        margin-left: -50%;
+    }
+    .second-title::after{
+        margin-left: 50%;
+    }
+    .service{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 450px){
+    .banner{
+        font-size: 0.7em;
+    }
+    .carousel{
+        width: 85%;
+    }
+    .req-back{
+        width: 8em;
+        height: 8em;
+        background-size: 8em;
+        margin-bottom: 1em;
+    }
+    .request .req-title{
+        font-size: 1em;
+    }
+    .request p{
+        width: 90%;
+    }
+    .ser-category{
+        width: 90%;
+    }
+    .category{
+        font-size: 0.5em;
+    }
+    .side{
+        height: auto;
+    }
+    .request{
+        height: auto !important;
+    }
+    .request .button{
+        margin-top: 1em;
+    }
+    .request .ser-category{
+        margin-top: 1em;
+    }
+    .request p{
+        margin-top: 1em;
+    }
+    .job-desc{
+        flex-direction: column;
+    }
+    .job-desc h4{
+        margin-bottom: 0;
+    }
+    .red-zone .button{
+        margin-top: 1em;
+    }
+    .hos{
+        font-size: 1.1em;
+    }
+    .hosp{
+        background-size: 1.25em;
+    }
+    .sub-heading span{
+        width: 55%;
+    }
+    .report{
+        flex-direction: column;
+        height: auto;
+    }
+    .ess{
+        height: auto;
+    }
+    .suspect{
+        width: 100% !important;
+        margin-top: 1em !important;
+    }
+    .main-fourth{
+        width: 90%;
+    }
+    .service{
+        width: 95%;
+        height: auto !important;
+    }
+    .second-title{
+        font-size: 0.9em;
+    }
+    .footer{
+        box-sizing: border-box;
+        padding: 1em;
+        font-size: 0.7em;
+    }
+}
+@media only screen and (max-height:650px){
+    .carousel .show{
+        height: 20vh !important;
+    }
+    .request, .req-status{
+        height: 130vh;
+    }
+    .status{
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 360px){
+    .carousel{
+        font-size: 0.7em;
+    }
+    .carousel .show{
+        height: 40vh !important;
+    }
+    .no-entry{
+        width: 10em;
+    }
+    .req-status{
+        height: auto;
+    }
+    .category{
+        display: none;
+    }
+    .status{
+        height: 80vh;
+    }
+    .ess{
+        width: 95%;
+    }
+    .ess .button{
+        text-align: center;
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .carousel .show{
+        height: 50vh !important;
+    }
+    .back-image{
+        background-size: 21em;
+    }
+    .no-entry{
+        width: 7em;
+        height: 7em;
+        background-size: 7em;
+    }
+}

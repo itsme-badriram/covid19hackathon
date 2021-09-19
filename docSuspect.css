@@ -1,0 +1,260 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading{
+    padding: 1em;
+    margin: 0;
+}
+.main{
+    margin: auto;
+    width: 60%;
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px 1px gray;
+}
+.main-head{
+    margin: 0;
+    padding: 0.5em;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-icon{
+    background-image: url("Images/report.png");
+    width: 3em;
+    height: 3em;
+    background-size: 2em;
+    border-radius: 50%;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+.filter{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1em;
+}
+select{
+    margin: auto;
+    width: 50%;
+    padding: 0.5em;
+    border-radius: 2em;
+    outline: none;
+    font-family: myFont;
+    font-size: 1.1em;
+    background-color: white;
+}
+.rep-box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px gray;
+    margin: 0.5em;
+    width: 40%;
+}
+.report h3{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+.details{
+    width: 55%;
+}
+.gender b{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+.age{
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+.time{
+    display: inline-block;
+    padding: 0.35em;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    margin-bottom: 0.5em;
+}
+.down{
+    background-image: url("Images/pdf.png");
+    width: 2em;
+    height: 2em;
+    background-size: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    filter: invert(1);
+}
+.download{
+    padding: 0.35em;
+    width: 70%;
+    font-size: 0.85em;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.download:hover{
+    background-color: black;
+}
+.progress{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.progress h4{
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.bar{
+    display: block;
+    width: 75%;
+    height: 1em;
+    border-radius: 2px;
+    border: 1px solid grey;
+    margin-bottom: 0.5em;
+}
+.value{
+    background-color: rgb(150,0,0);
+    height: 1em;
+    display: inline-block;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1550px){
+    .main{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:1450px){
+    .main{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .main{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:1100px){
+    .banner{
+        font-size: 0.8em;
+    }
+    select{
+        width: 70%;
+        font-size: 1em;
+    }
+    .main{
+        width: 90%;
+    }
+    .main-head{
+        font-size: 1.15em;
+    }
+    .progress{
+        width: 45%;
+    }
+    .report{
+        width: 45%;
+    }
+}
+@media only screen and (max-width:950px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .main{
+        width: 95%;
+    }
+    .rep-box{
+        font-size: 0.85em;
+    }
+    .report{
+        width: 60%;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+
+}
+@media only screen and (max-width:700px){
+    .banner{
+        font-size: 0.7em;
+    }
+    .download{
+        width: 80%;
+    }
+    select{
+        width: 85%;
+    }
+    .report{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:500px){
+    select{
+        width: 90%;
+    }
+    .report{
+        width: 95%;
+    }
+}

@@ -1,0 +1,200 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.form-wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 0.25%;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 1.05em;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    box-shadow: 0px 0px 2px 1px grey;
+}
+label{
+    font-weight: bold;
+}
+.donate-head{
+    background-color: rgb(49, 110, 164);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.donate-head h2{
+    padding: 0.5em;
+    display: inline-block;
+}
+.donate-head .money{
+    background-image: url("Images/money.png");
+    width: 4em;
+    height: 4em;
+    background-size: 2.5em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-color: wheat;
+    margin-right: 1em;
+    filter: invert(1);
+}
+.payment{
+    width: 80%;
+    margin: auto;
+}
+.credit, .net{
+    border-radius: 5px;
+    box-shadow: 0px 3px 4px 2px grey;
+    padding: 1em;
+}
+.credit:hover, .net:hover{
+    box-shadow: 0px 3px 4px 3px rgb(49, 110, 164);
+}
+.method{
+    border-radius: 3px;
+    padding: 0.75%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: inline-block;
+    cursor: pointer;
+}
+.credit-show, .net-show{
+    display: none;
+    padding: 0.75%;
+}
+.form-wrap input, .form-wrap select, #bank-opt{
+    font-family: myFont;
+    font-size: 1.15em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.45em;
+    background-color: white;
+    box-sizing: border-box;
+    border: none;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 3px;
+    width: 100%;
+}
+.form-wrap select, .form-wrap input[type=password]{
+    margin-right: 1em;
+    width: max-content;
+}
+.form-wrap input:focus, .form-wrap select:focus,
+.form-wrap input[type=password]:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.form-wrap input[type=submit]{
+    margin-top: 0;
+    width: 30%;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.form-wrap input[type=submit]:hover{
+    color: rgb(49, 110, 164);
+    background-color: white;
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.amount{
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+}
+.amount li, #other-amt{
+    float: left;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.amount li:hover, #other-amt:hover{
+    font-weight: bold;
+    color: white;
+    background-color: rgba(49, 110, 164, 0.85);
+}
+.other{
+    width: 50% !important;
+}
+#otherA{
+    display: none;
+}
+#cvv{
+    width: 25%;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1250px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .footer{
+        font-size: 0.75em;
+        box-sizing: border-box;
+        padding: 0.5em;
+    }
+    .form-wrap{
+        font-size: 0.85em;
+        width: 75%;
+    }
+}
+@media only screen and (max-width:750px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .form-wrap{
+        font-size: 0.85em;
+        margin-top: 1.25em;
+        width: 95%;
+    }
+    .other{
+        width: 100% !important;
+    }
+    .payment{
+        width: 95%;
+    }
+} 

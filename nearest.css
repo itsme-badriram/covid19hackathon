@@ -1,0 +1,117 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.05);
+}
+#googleMap{
+    width: 100%;
+    height: 100vh;
+}
+.search{
+    background-image: url("Images/search-icon.png");
+    width: 3em;
+    height: 3em;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(49, 110, 164);
+    box-shadow: 0px 0px 3px 1px gray;
+    border-radius: 50%;
+    display: block;
+    z-index: 6;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    cursor: pointer;
+}
+.form-wrap{
+    position: absolute;
+    box-sizing: border-box;
+    width: 25%;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 5;
+    background-color: white;
+    box-shadow: 0px 0px 6px 1px gray;
+    padding: 1em;
+    border-radius: 5px;
+    display: none;
+}
+input[type=text]{
+    padding: 0.5em;
+    width: 100%;
+    font-family: myFont;
+    border-radius: 3px;
+    border: 1px solid grey;
+    margin-top: 0.25em;
+    outline: none;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+input[type=text]:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: myFont;
+}
+label:hover{
+    background-color: rgba(49, 110, 164,0.25);
+    font-weight: bold;
+}
+input[type=radio]{
+    margin-right: 0.75em;
+}
+input[type=submit]{
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 1em;
+    border: 2px solid rgb(49, 110, 164);
+    color: white;
+    font-family: myFont;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(49, 110, 164);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+}
+@media only screen and (max-width:1050px){
+    .form-wrap{
+        width: 30%;
+    }
+}
+@media only screen and (max-width:900px){
+    .form-wrap{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:700px){
+    .form-wrap{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:500px){
+    .form-wrap{
+        width: 90%;
+    }
+}

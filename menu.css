@@ -1,0 +1,122 @@
+.banner{
+    display: flex;
+    align-items: center;
+    background-color: rgb(49, 110, 164);
+    font-size: 0.85em;
+}
+.banner h1{
+    color: white;
+    margin: 0px;
+    padding: 0.75em;
+    width: 75%;
+}
+.banner .menu-img{
+    background-image: url("Images/mainmenu.png");
+    width: 3em;
+    height: 3em;
+    background-size: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    margin-left: auto;
+    margin-right: 0.5em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.menu-img:hover{
+    filter: none;
+    background-color: white;
+}
+.menu h2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu .mBack, .menu .mDown{
+    width: 0.375em;
+    height: 0.375em;
+    display: block;
+    border-color: black;
+    border-width: 0px 3px 3px 0px;
+    border-style: solid;
+    margin-right: 1em;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+.menu{
+    color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    z-index: 2;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu ul li{
+    padding: 1em;
+    font-size: 1.15em;
+    cursor: pointer;
+}
+.menu ul li:hover{
+    background-color: rgb(49, 110, 164);
+    font-weight: bold;
+    color: white;
+    transition: 0.2s;
+    border-left: 7px solid black;
+    margin-left: 2%;
+}
+.menu-drop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-drop:hover .mDown{
+    border-color: white !important;
+}
+.sub-menu{
+    display: none;
+    background-color: whitesmoke;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.sub-menu li:hover{
+    margin-left: 0 !important;
+}
+.menu .mDown{
+    transform: rotate(45deg);
+    transition: 0.2s;
+}
+.rotateDrop{
+    transform: rotate(225deg) !important;
+}
+.menu h2{
+    padding-left: 1em;
+}
+@media only screen and (max-width: 1150px){
+    .menu{
+        font-size: 0.85em;
+    }
+    .menu ul li{
+        padding: 1.25em;
+    }
+}
+@media only screen and (max-width: 500px){
+    .menu ul li{
+        padding: 1em;
+    }
+}

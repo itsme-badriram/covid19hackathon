@@ -1,0 +1,89 @@
+.migrant-image{
+    width: 24em;
+    background-image: url("Images/migrant.jpg");
+}
+.request{
+    background-color: unset;
+    box-shadow: none;
+    padding: 0;
+}
+.qr-vol, .vol-migrant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px 1px gray;
+    border-radius: 5px;
+    height: 50vh;
+}
+.head{
+    font-size: 1.1em;
+}
+.volPass{
+    width: 80%;
+    box-sizing: border-box;
+    padding: 0.75em;
+    background-color: rgb(49, 110, 164,0.05);
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid gainsboro;
+    color: darkblue;
+    font-weight: bold;
+}
+.vol-migrant{
+    margin-top: 1em;
+    height: 25vh;
+}
+.vol-migrant .hosp-box{
+    border-left: 3px solid rgb(49, 110, 164);
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+.vol-migrant .hosp-box .contact{
+    margin-top: 0.5em;
+}
+.qricon{
+    width: 7em;
+    height: 7em;
+    background-size: 6em;
+    
+    background-color: unset;
+    box-shadow: unset;
+    border-radius: unset;
+}
+.pass{
+    background-size: 2em;
+    background-image: url("Images/qrcode.png");
+}
+.vol-migrant{
+    padding: 0.5em;
+}
+.migrant{
+    background-size: 2em;
+    background-image: url("Images/migrant.png");
+}
+@media only screen and (max-width:450px){
+    .qr-vol, .vol-migrant{
+        height: auto;
+    }
+    .qr-vol{
+        padding: 0.75em;
+    }
+    .status-box h3 span:nth-child(1){
+        width: 65%;
+    }
+    .head{
+        font-size: 1.25em;
+    }
+    .migrant-image{
+        width: 23em;
+        background-size: cover;
+    }
+}
+@media only screen and (max-width:320px){
+    .migrant-image{
+        width: 20em;
+    }
+}

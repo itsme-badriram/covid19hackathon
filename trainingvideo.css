@@ -1,0 +1,312 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading{
+    padding: 1em;
+    margin: 0;
+}
+.addVideo{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75em;
+}
+#add{
+    border-radius: 50%;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+#add:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+    box-shadow: 0px 0px 10px 2px rgb(49, 110, 164);
+}
+.formA{
+    width: 60%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+#form-wrap{
+    display: none;
+}
+#form-wrap input{
+    padding: 0.75em;
+    font-size: 1.15em;
+    margin: 0.75em;
+    width: 75%;
+    font-family: myFont;
+    border: none;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 5px;
+}
+#form-wrap input[type=text]:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+#form-wrap input[type=button]{
+    width: auto;
+    font-size: 1em;
+    padding: 0.75em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    background-color: rgb(49, 110, 164);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+#form-wrap input[type=button]:hover{
+    color: rgb(49, 110, 164);
+    background-color: white;
+    box-shadow: 0px 0px 3px 1px rgb(49, 110, 164);
+}
+.title{
+    margin: 0px;
+    padding: 1em;
+    width: max-content;
+}
+.videos{
+    margin: auto;
+    width: 90%;
+    box-shadow: 0px 3px 4px 2px grey;
+    padding: 1em;
+    max-height: 100vh;
+    border-radius: 0.75em;
+    display: flex;
+    justify-content: center;
+}
+.sidebar h3{
+    margin: 0px;
+    padding: 0.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+.sidebar{
+    width: 25%;
+    border-radius: 0.75em;
+    background-color: rgba(49, 110, 164,0.25);
+    border: 1px solid rgb(49, 110, 164);
+    display: block;
+    overflow: auto;
+}
+.sidebar ul{
+    padding: 0px;
+    list-style: none;
+    padding: 1em;
+    text-align: center;
+}
+.sidebar ul li{
+    padding: 1em;
+    font-size: 1.15em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sidebar ul li:hover{
+    background-color: rgba(49, 110, 164,0.85) !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-right: 5px solid black;
+}
+.sidebar-small{
+    display: none;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em;
+    text-align: center;
+}
+.sidebar-small select{
+    background-color: white;
+    color: black;
+    font-size: 1.25em;
+    font-family: myFont;
+    margin-bottom: 1em;
+    outline: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 50%;
+}
+.mainbar{
+    width: 75%;
+    padding: 0.75em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.video{
+    width: 25%;
+    box-shadow: 0px 3px 5px 2px gray;
+    height: auto;
+    border-radius: 3px;
+    margin: 1%;
+    padding: 0.75em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+.video .thumb{
+    width: 100%;
+    height: 75%;
+    background-color: rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
+#video-url{
+    display: none;
+}
+#video-title{
+    font-weight: bold;
+    margin-top: 1em;
+}
+.video:hover{
+    box-shadow: 0px 0px 7px 3px rgb(49, 110, 164);
+}
+.thumb img{
+    width: 100%;
+    height: 100%;
+}
+.video .video-title{
+    height: 25%;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1440px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .mainbar .video{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:1124px){
+    .addVideo{
+        font-size: 0.85em;
+    }
+    .videos{
+        font-size: 0.9em;
+    }
+    .mainbar .video{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:980px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .addVideo{
+        font-size: 0.8em;
+    }
+    .videos{
+        flex-direction: column;
+    }
+    .sidebar{
+        display: none;
+    }
+    .sidebar-small{
+        display: block;
+    }
+    .mainbar{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .mainbar .video{
+        width: 35%;
+    }
+    .footer{
+        font-size: 0.85em;
+    }
+}
+@media only screen and (max-width:680px){
+    .mainbar .video{
+        width: 75%;
+    }
+    .addVideo{
+        flex-direction: column;
+    }
+    .sidebar-small select{
+        width: 75%;
+        font-size: 1em;
+    }
+    .formA{
+        width: 100%;
+    }
+    #add{
+        margin: 0;
+        margin-right: 0.5em;
+    }
+    #form-wrap input[type=submit]{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:500px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .videos{
+        margin: auto;
+        max-height: max-content;
+        box-shadow: none;
+    }
+    .sidebar-small select{
+        width: 85%;
+    }
+    .addVideo h2{
+        padding: 0.75em;
+    }
+    .mainbar{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mainbar .video{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    #video-title{
+        margin-top: 0.5em;
+    }
+    .footer{
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,203 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading{
+    padding: 1em;
+    margin: 0;
+}
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.main .box{
+    text-align: center;
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.1s;
+    overflow: hidden;
+    margin: 2%;
+    box-shadow: 0px 5px 8px 2px grey;
+    animation: show 0.2s linear;
+}
+@keyframes show{
+    0%{
+        transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.box button{
+    font-family: myFont;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 1em 2em;
+    margin: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+.box button:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+    box-shadow: 0px 0px 5px 2px rgb(49, 110, 164);
+}
+.content{
+    display: none;
+    text-align: justify;
+    padding: 1em;
+    color: white;
+    animation: up 0.4s linear;
+}
+.content h3{
+    margin: 0;
+}
+.content hr{
+    margin-top: 0;
+}
+#status, #request, #docApp, #docStatus{
+    display: none;
+}
+#back{
+    display: none;
+    margin: auto;
+    width: max-content;
+    background-color: rgb(49, 110, 164);
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    color: white;
+    border-radius: 4px;
+    font-family: myFont;
+    font-weight: bold;
+    font-size: 1.15em;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    border: 2px solid rgb(49, 110, 164);
+}
+#back:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+}
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.box .icon-wrap{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(49, 110, 164);
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 5px;
+    margin: auto;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.3s;
+}
+.icon{
+    display: block;
+    transform: rotate(-45deg);
+    background-image: url("Images/back-white.png");
+    width: 1.5em;
+    height: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0.75em;
+}
+.icon-wrap:hover{
+    width: 85%;
+    height: 100%;
+    background-color: rgb(49, 110, 164);
+    border-radius: 0%;
+}
+.icon-wrap:hover .icon{
+    display: none;
+}
+.icon-wrap:hover .content{
+    display: block;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1100px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .main{
+        width: 85%;
+        font-size: 0.85em;
+    }
+}
+@media only screen and (max-width:900px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .main{
+        width: 90%;
+        font-size: 0.80em;
+    }
+    .main .box{
+        width: 60%;
+    }
+    #back{
+        font-size: 0.85em;
+    }
+}
+@media only screen and (max-width:500px){
+    .main .box{
+        width: 100%;
+    }
+}

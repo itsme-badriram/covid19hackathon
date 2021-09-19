@@ -1,0 +1,27 @@
+.no-result{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    padding: 1em 1.5em;
+    font-family: myFont;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.no-result::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(49,110,164);
+    display: block;
+    margin-right: 1em;
+}
+.no-result span{
+    width: 90%;
+    text-align: left;
+}

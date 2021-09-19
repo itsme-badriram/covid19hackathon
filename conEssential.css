@@ -1,0 +1,350 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.filter-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main #googleMap{
+    width: 50%;
+    height: 75vh;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 4px 2px grey;
+}
+.main .cont-form{
+    margin: 1%;
+    width: 50%;
+    box-sizing: border-box;
+    transition: 0.3s;
+    animation: slideUp 0.3s linear;;
+}
+@keyframes slideUp{
+    0%{
+        transform: translateX(-3%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.cont-form h2{
+    margin: 0px;
+    margin-bottom: 1%;
+}
+.radio{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 2em;
+}
+.rad-button{
+    display: block;
+    width: 1.15em;
+    height: 1.15em;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.rad-text{
+    font-size: 1.15em;
+    cursor: pointer;
+    width: 85%;
+}
+.cont-form hr, .workAvail hr{
+    margin: 0px;
+    width: 95%;
+}
+.cont-form input[type=text]{
+    padding: 0.75em;
+    font-family: myFont;
+    font-size: 1.15em;
+    width: 35%;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: none;
+}
+.cont-form input[type=text]:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.cont-form input[type=button], #workHead button{
+    margin-top: 2%;
+    font-family: myFont;
+    font-size: 1.15em;
+    padding: 0.75%;
+    width: 20%;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border: 2px solid rgb(49, 110, 164);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+.cont-form input[type=button]:hover, #workHead button:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+}
+#work{
+    width: 30%;
+}
+#workHead{
+    display: none;
+}
+#workHead h2{
+    display: inline-block;
+    margin-top: 0px;
+}
+#workHead button{
+    float: right;
+    width: max-content;
+    margin: auto;
+}
+.workAvail{
+    width: 50%;
+    margin: 1%;
+    display: none;
+}
+.map-show{
+    justify-content: right;
+    margin: 1%;
+}
+.map-show .rad-text{
+    text-align: right;
+    width: max-content;
+}
+.map-show .rad-button{
+    background-color: white;
+    border: 5px solid rgb(49, 110, 164);
+}
+.available{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-height: 75vh;
+    overflow: auto;
+    transition: 0.2s;
+    animation: popup 0.2s linear;
+}
+@keyframes popup{
+    0%{
+        transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.avail-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px 2px grey;
+    position: relative;
+    cursor: pointer;
+    width: 40%;
+}
+.avail-box:hover{
+    box-shadow: 0px 3px 5px 2px rgb(49, 110, 164);
+}
+.avail-box .avail-info{
+    width: 80%;
+}
+.avail-info h5{
+    margin: 0px;
+    color: rgb(49, 110, 164);
+}
+.avail-box .away{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.avail-loc .lat, .avail-loc .lng{
+    display: none;
+}
+.avail-box p{
+    white-space: pre-line;
+}
+.avail-box h3{
+    margin: 0px;
+    display: inline-block;
+}
+.avail-loc{
+    display: block;
+    text-align: center;
+}
+.location, .cont-img{
+    width: 5em;
+    height: 5em;
+    background-image: url("Images/location.png");
+    background-size: 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+}
+.contact{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.cont-num{
+    padding: 0.5em;
+    cursor: pointer;
+}
+.cont-num:hover{
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(49, 110, 164);
+}
+.cont-img{
+    background-image: url("Images/contact.png");
+    width: 2em;
+    height: 2em;
+    background-size: 1em;
+    display: block;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1150px){
+    .avail-box{
+        width: 85%;
+    }
+    #work{
+        width: 40%;
+    }
+    .cont-form input[type=text]{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 1020px){
+    .avail-box{
+        width: 85%;
+    }
+    .rad-button{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .rad-text{
+        width: 85%;
+        margin-left: auto;
+    }
+}
+@media only screen and (max-width: 880px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .main .cont-form{
+        width: 95%;
+        padding: 2%;
+        font-size: 0.95em;
+    }
+    .cont-form .rad-text{
+        font-size: 1em;
+    }
+    .cont-form input[type=text]{
+        width: 85%;
+    }
+    #work{
+        width: 50%;
+        font-size: 0.85em;
+        padding: 1em;
+    }
+    .rad-button{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .rad-text{
+        width: 85%;
+        margin-left: auto;
+    }
+    .main #googleMap{
+        width: 95%;
+        box-shadow: 0px 0px 2px 1px grey;
+        margin: auto;
+        margin-top: 1em;
+    }
+    .workAvail{
+        width: 90%;
+        margin: auto;
+    }
+    .workAvail #workHead{
+        display: inline-block;
+        font-size: 0.85em;
+        margin: auto;
+    }
+    #workHead{
+        width: 100%;
+    }
+    #workHead h2{
+        margin-top: 1em;
+        width: 75%;
+    }
+    #workHead button{
+        margin-top: 1em;
+        font-size: 0.85em;
+        padding: 1em;
+        width: 20%;
+    }
+    .avail-box{
+        width: 95%;
+        font-size: 0.85em;
+    }
+    .avail-box .location{
+        background-size: 3em;
+    }
+    .footer{
+        font-size: 0.85em;
+    }
+}

@@ -1,0 +1,511 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.filter-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading{
+    padding: 1em;
+    margin: 0;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 60%;
+    height: 80vh;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 0px grey;
+    box-sizing: border-box;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.appoint{
+    width: 40%;
+    position: relative;
+    overflow: auto;
+}
+.appoint::-webkit-scrollbar{
+    display: none;
+}
+.app-head{
+    padding: 1em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(49, 110, 164);
+}
+.app-head h2{
+    margin: 0;
+}
+.curr-date{
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: white;
+}
+.count{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-left: 1em;
+    text-align: center;
+    padding: 0.5em;
+    background-color: black;
+}
+.app-icon{
+    background-image: url("Images/appoint.png");
+    width: 4em;
+    height: 4em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.app-box{
+    margin: 0.75em;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 1px gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app-box:hover{
+    background-color: rgba(49,110,164,0.15);
+    box-shadow: 0px 0px 5px 1px rgb(49, 110, 164);
+}
+.pat h3{
+    margin: 0;
+}
+.pat-name{
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.15em;
+    display: block;
+}
+.pat-id{
+    display: inline-block;
+    padding: 0.35em;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    color: rgb(49, 110, 164);
+    font-weight: bold;
+}
+.details{
+    display: flex;
+    align-items: center;
+}
+.cont{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+.cont a{
+    text-decoration: none;
+    color: rgb(49, 110, 164);
+    font-weight: bold;
+}
+.gender{
+    color: white;
+    background-color: black;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    width: 1.25em;
+    height: 1.25em;
+    margin-right:0.5em ;
+}
+.height, .weight, .contact{
+    background-image: url("Images/height.png");
+    width: 2em;
+    height: 2em;
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.weight{
+    background-image: url("Images/weight.png");
+}
+.contact{
+    background-image: url("Images/contact.png");
+}
+.timing{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.timing h3{
+    margin-top: 0;
+}
+.cancel{
+    width: 2em;
+    height: 2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(49,110,164,0.25);
+}
+.cancel:hover{
+    background-color: rgb(150,0,0);
+    color: white;
+}
+.report{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.report-box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.rep-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.rep-head{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(49,110,164);
+}
+.rep-head h2{
+    margin: 0;
+}
+.rep-head button{
+    font-family: myFont;
+    font-size: 1.05em;
+    padding: 0.5em;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: rgb(49, 110, 164);
+    border: 1px solid white;
+    cursor: pointer;
+    outline: none;
+}
+.rep-head button:hover{
+    background-color: white;
+    color: rgb(49, 110, 164);
+}
+.rep{
+    width: 30%;
+    padding: 0.5em;
+    margin: auto;
+    box-shadow: 0px 0px 2px 0px gray;
+    border-radius: 4px;
+    background-color: rgba(49,110,164,0.25);
+    margin: 0.5em;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.rep h3{
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+}
+.rep .gender{
+    display: inline-block;
+    text-align: center;
+    margin-left: 1em;
+}
+.rep table{
+    table-layout: fixed;
+    width: 90%;
+    text-align: left;
+}
+.rep th, .rep td{
+    padding: 0.4em;
+}
+.progress{
+    width: 95%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.progress h4{
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.bar{
+    display: block;
+    width: 75%;
+    height: 1em;
+    border-radius: 2px;
+    border: 1px solid grey;
+    margin-bottom: 0.5em;
+}
+.value{
+    background-color: rgb(150,0,0);
+    height: 1em;
+    display: inline-block;
+}
+.down{
+    background-image: url("Images/pdf.png");
+    width: 2em;
+    height: 2em;
+    background-size: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    filter: invert(1);
+}
+.download{
+    padding: 0.25em;
+    width: 75%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+    background-color: rgb(49, 110, 164);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.download:hover{
+    background-color: black;
+}
+.suspect{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+#graph{
+    width: 60%;
+    height: 40vh;
+    box-sizing: border-box;
+}
+.side-box{
+    width: 40%;
+    height: 100%;
+    margin-left: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.result, .record{
+    height: 50%;
+    margin: 0.5em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(49, 110, 164,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.result:hover, .record:hover{
+    background-color: rgb(49,110,164);
+    color: white;
+}
+.record-icon, .result-icon{
+    width: 5em;
+    height: 5em;
+    background-size: 4em;
+    background-image: url("Images/data-col.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+.result-icon{
+    background-image: url("Images/lab.png");
+}
+.rec-text, .res-text{
+    width: 50%;
+    text-align: right;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1500px){
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .appoint{
+        width: 60%;
+    }
+    .report{
+        width: 75%;
+    }
+}
+@media only screen and (max-width:1300px){
+    .banner{
+        font-size: 0.85em;
+    }
+    .appoint{
+        width: 70%;
+    }
+    .report{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:1100px){
+    .banner{
+        font-size: 0.80em;
+    }
+    .appoint{
+        font-size: 0.95em;
+        width: 80%;
+    }
+    .report{
+        width: 95%;
+        font-size: 0.95em;
+    }
+}
+@media only screen and (max-width:990px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .appoint{
+        width: 95%;
+        font-size: 0.85em;
+    }
+    .report{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width:800px){
+    .suspect{
+        flex-direction: column;
+    }
+    #graph{
+        margin-top: 1em;
+        width: 85%;
+        height: 60vh;
+    }
+    .side-box{
+        flex-direction: row;
+        width: 90%;
+    }
+    .report{
+        height: max-content !important;
+    }
+    .rep-head{
+        font-size: 0.9em;
+    }
+    .rep-box{
+        overflow: auto;
+        margin: auto;
+        display: block;
+        height: 75vh !important;
+        border-bottom: 1px solid grey;
+    }
+    .rep-box::-webkit-scrollbar{
+        display: none;
+    }
+    .rep{
+        width: 50%;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .result, .record{
+        height: 15vh;
+    }
+}
+@media only screen and (max-width:700px){
+    .banner{
+        font-size: 0.70em;
+    }
+    .report{
+        height: 120vh;
+    }
+    .rep{
+        width: 85%;
+    }
+    #graph{
+        width: 95%;
+        height: 50vh;
+    }
+    .side-box{
+        flex-direction: column;
+        width: 80%;
+    }
+    .footer{
+        font-size: 0.75em;
+    }
+}
+@media only screen and (max-width:500px){
+    .appoint{
+        font-size: 0.75em;
+        height: 80vh;
+    }
+    .suspect{
+        height: max-content !important;
+    }
+    .result, .record{
+        height: max-content !important;
+    }
+    .side-box{
+        width: 95%;
+    }
+}   

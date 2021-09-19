@@ -1,0 +1,157 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.formReq{
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
+.form-wrap{
+    margin: auto;
+    width: 50%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px grey;
+}
+.form-wrap label{
+    text-align: left;
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+.form-wrap input, .form-wrap select{
+    padding: 0.75em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    box-sizing: border-box;
+    font-size: 1.15em;
+    font-family: myFont;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+}
+.form-wrap input:focus{
+    box-shadow: 0px 0px 2px 1px rgb(49, 110, 164);
+}
+.form-wrap select{
+    width: 100%;
+    background-color: white;
+}
+.form-wrap input[type=submit], input[type=button]{
+    background-color: rgb(49,110,164);
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    font-size: 1.05em;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.form-wrap input[type=submit]:hover,  input[type=button]:hover{
+    background-color: white;
+    color: rgb(49,110,164);
+    box-shadow: 0px 0px 2px 2px rgb(49,110,164);
+}
+#mapShow{
+    background-image: url("Images/pin.png");
+    width: 3em;
+    height: 3em;
+    z-index: 1;
+    background-size: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 1px white;
+    background-color: rgb(49, 110, 164);
+    position: absolute;
+    margin: 0.5em;
+    cursor: pointer;
+}
+#mapAll{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+}
+#googleMap{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    background-color: rgb(0,0,0,0.25);
+    box-shadow: 0px 0px 3px 2px grey;
+    border-radius: 5px;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1200px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .form-wrap{
+        margin-top: 1%;
+        margin-bottom: 1%;
+        width: 75%;
+        font-size: 0.85em;
+    }
+    .footer{
+        font-size: 0.75em;
+        box-sizing: border-box;
+        padding: 0.5em;
+    }
+}
+@media only screen and (max-width: 900px){
+    .form-wrap{
+        width: 90%;
+    }
+    .formReq{
+        width: 70%;
+    }
+    .heading{
+        font-size: 0.95em;
+    }
+    .banner{
+        font-size: 0.70em;
+    }
+}
+@media only screen and (max-width: 600px){
+    .formReq{
+        width: 85%;
+    }
+}

@@ -1,0 +1,321 @@
+@font-face{
+    font-family: myFont;
+    src: url("Bitter/Bitter-Regular.ttf");
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: myFont;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo{
+    background-image: url("Images/logo-covid.png");
+    width: 4.5em;
+    height: 4.5em;
+    background-size: 4em;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.form-wrap{
+    width: 50%;
+    padding: 1em;
+    margin: auto;
+    margin-top: 2em;
+    box-shadow: 0px 1px 2px 1px gray;
+    box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 1.35em;
+    margin: 0.5em 0em;
+}
+.head span:nth-child(1){
+    padding-left: 0.6em;
+    border-left: 5px solid rgb(49,110,164);
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0.5em;
+    padding-left: 0;
+}
+.sideArrow{
+    width: 0.5em;
+    height: 0.5em;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+    display: block;
+}
+.user-type{
+    font-size: 0.65em;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+.edit{
+    width: 1.5em;
+    height: 1.5em;
+    background-size: 1.25em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    background-image: url("Images/edit.png");
+}
+.editing{
+    padding: 0.5em !important;
+    border: 1px solid rgba(49, 110, 164,0.5) !important;
+    border-left: 4px solid rgb(49, 110, 164) !important;
+}
+.input-box{
+    padding: 1em;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin-top: 0.25em;
+    font-size: 0.85em;
+}
+.input-box hr{
+    border: 0;
+    height: 2px;
+    background: whitesmoke;
+    margin-bottom: 1em;
+}
+.input-box div{
+    width: 50%;
+}
+.input-box input, .input-box select{
+    width: 100%;
+    padding: 0.25em;
+    padding-left: 0;
+    margin-top: 0.5em;
+    font-size: 1.25em;
+    font-family: myFont;
+    box-sizing: border-box;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.input-box label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.input-box label:hover{
+    background-color: rgba(49, 110, 164,0.015);
+}
+.input-box label:hover input{
+    background-color: transparent;
+}
+.input-box b{
+    font-size: 0.85em;
+    color: rgba(49, 110, 164,0.75);
+    display: block;
+}
+.input-box h5{
+    margin: 0;
+    color: gray;
+    font-weight: normal;
+}
+.time-slot{
+    display: flex;
+    align-items: center;
+}
+.start-time, .end-time{
+    margin-right: 0.5em;
+    width: 25% !important;
+    border-radius: unset !important;
+    font-size: 1.1em !important;
+}
+.time-edit{
+    width: 40% !important;
+}
+.removeSlot{
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0.5em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 9, 9);
+    position: relative;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+.removeSlot::before{
+    content: '-';
+    position: absolute;
+    display: block;
+}
+.password{
+    display: none;
+}
+.button-wrap{
+    display: none;
+    align-items: center;
+    transition: 0.2s;
+}
+.save-button, .cancel-button, .addSlot{
+    background-color: rgba(49, 110, 164,0.85);
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    margin-right: 1em;
+    margin-top: 1em;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.addSlot{
+    background-color: seagreen;
+}
+.save-button:hover{
+    background-color: rgb(49, 110, 164);
+}
+.cancel-button{
+    background-color: transparent;
+    color: rgb(49, 110, 164);
+    border: 1px solid rgba(49, 110, 164,0.5);
+}
+.cancel-button:hover{
+    background-color: rgba(49, 110, 164,0.05);
+}
+#mapShow{
+    background-image: url("Images/nearby.png");
+    width: 2.5em;
+    height: 2.5em;
+    z-index: 1;
+    background-size: 1.35em;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    position: absolute;
+    margin: 0.5em;
+    cursor: pointer;
+}
+#mapAll{
+    width: 75%;
+    height: 30vh;
+    position: relative;
+    margin: auto;
+}
+#googleMap{
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(49, 110, 164);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@media only screen and (max-width:1560px){
+    .form-wrap{
+        width: 55%;
+    }
+}
+@media only screen and (max-width:1440px){
+    .banner{
+        font-size: 0.80em;
+    }
+    .form-wrap{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .banner{
+        font-size: 0.75em;
+    }
+    .form-wrap{
+        width: 85%;
+    }
+    .footer{
+        font-size: 0.75em;
+        box-sizing: border-box;
+        padding: 0.5em;
+    }
+}
+@media only screen and (max-width: 900px){
+    .form-wrap{
+        width: 90%;
+    }
+    .input-box div{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .banner{
+        font-size: 0.7em;
+    }
+    .form-wrap{
+        width: 95%;
+    }
+    .input-box div{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 550px){
+    .form-wrap{
+        width: 97%;
+        font-size: 0.9em;
+    }
+    .box{
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 420px){
+    .form-wrap{
+        padding: 0.25em;
+        box-shadow: none;
+        font-size: 0.85em;
+    }
+    .input-box div{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .input-box select{
+        font-size: 1.1em;
+    }
+}

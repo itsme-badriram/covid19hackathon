@@ -1,0 +1,84 @@
+.symtable{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    z-index: 2;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    position: absolute;
+    top: 3%;
+    left: 0;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 5px;
+}
+.symtable h3{
+    text-align: center;
+}
+.stable{
+	font-weight: bold;
+    padding: 0;
+    width: 95%;
+    box-sizing: border-box;
+    table-layout: fixed;
+    text-align: left;
+    color: white;
+    background-color: rgba(49, 110, 164,0.5);
+}
+.stable th{
+    text-align: center;
+}
+.stable th, .stable td{
+    font-size: 1em;
+    padding: 0.5em;
+} 
+.stable tr:nth-child(odd) {
+      background-color: white;
+}
+.stable tr:nth-child(even) {
+	  background-color: aliceblue;
+}
+
+.stable th {
+	  background-color: rgb(49, 110, 164);
+}
+
+.stable td:first-child { color: black; }
+
+#prog{
+    background-color: white;
+    border: 1px solid rgb(49,110,164);
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+#prog-title{
+    margin: 0px;
+}
+.skills{
+    width: 50%;
+}
+#value{
+    color: white;
+    text-align: right;
+    padding: 0.5em;
+    font-size: 0.75em;
+    display: inline-block;
+    background-color: rgb(49, 110, 164);
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px 1px rgb(49,110,164);
+    animation: valueGrow 1s linear;
+}
+@keyframes valueGrow{
+    0%{
+        width: 0%;
+    }
+}
+#symback{
+    width: 20%;
+    font-size: 0.85em;
+    padding: 0.5em;
+}
